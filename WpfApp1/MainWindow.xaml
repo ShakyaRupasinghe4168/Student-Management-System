@@ -1,0 +1,167 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        MouseDown="Window_MouseDown">
+
+    <Border CornerRadius="20">
+        <Border.Background>
+            <ImageBrush ImageSource="/Model/Images/edu15.jpg"
+                        />
+        </Border.Background>
+
+        <Border CornerRadius="20"                    
+            BorderThickness="2"
+           >
+
+
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.ColumnSpan="3">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="WELCOME"
+                               Foreground="DarkBlue"
+                               FontWeight="Bold"
+                               FontSize="12"
+                               FontFamily="Montserrat"
+                               Grid.Column="0"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
+
+                    <Button Grid.Column="1" Content="-" Click="btnMinimize_Click"  
+                                Style="{StaticResource mainbutten1}"/>
+                    <Button Grid.Column="2" Content="+" Click="btnMaximize_Click"  
+                                Style="{StaticResource mainbutten1}"/>
+                    <Button Grid.Column="3" Content="x" Click="btnClose_Click"  
+                                Style="{StaticResource mainbutten1}"/>
+                </Grid>
+
+                <StackPanel Width="530"
+                            
+                            Grid.Row="1"
+                            Orientation="Vertical"
+                            Background="#7bbee3"
+                            Opacity="0.9"
+                            Margin="120,20,120,20" Grid.ColumnSpan="3">
+
+                    <Image Source="/Model/Images/download.png"
+                           Width="100" Height="100"/>
+
+                    <TextBlock Text="OXFORD EDUCATION INSTITUTE"
+                               Foreground="Black"
+                               Background="Transparent"
+                               FontSize="30"
+                               FontWeight="ExtraBold"
+                               FontFamily="Montserrat"
+                               HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="Educating the mind without educating the heart is no education at all."
+                               Foreground="#040414"
+                               FontSize="17"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               TextWrapping="Wrap"
+                               TextAlignment="Center"
+                               Margin="20,15,20,0"/>
+
+
+                    <Button x:Name="btnLogin"                          
+                            BorderThickness="0"
+                            Content="ADMIN"
+                            Foreground="White"
+                            Background="#0c51ad"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"                           
+                            Margin="0,50,0,0"
+                            Click="btnLogin_Click1">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#462AD8"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#28AEED"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="150" Height="40"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button x:Name="btnLogin2"                          
+                            BorderThickness="0"
+                            Content="STUDENT"
+                            Foreground="White"
+                            Background="#0c51ad"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"                           
+                            Margin="0,50,0,0"
+                            Click="btnLogin_Click2">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#462AD8"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#28AEED"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="150" Height="40"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+
+                </StackPanel>
+
+            </Grid>
+
+        </Border>
+
+    </Border>
+
+</Window>
