@@ -18,7 +18,7 @@ The Student Management System is a C# WPF application developed using the MVVM a
 
 - C# WPF (Windows Presentation Foundation)
 - MVVM (Model-View-ViewModel) Architecture
-
+- SQLite for Database Handling
 - 
 Usage:
 
